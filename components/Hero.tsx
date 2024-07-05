@@ -5,7 +5,7 @@ import searchIcon from "@/public/searchIcon.svg"
 import {pacifico} from "../app/fonts"
 import { useRef } from "react"
 const Hero = () => {
-  const inputRef = useRef(null);
+  const inputRef = useRef();
   return (
     <div className="h-[100vh] flex flex-col justify-center items-center ">
       <Image src={hero} alt="hero" fill className="-z-10" />

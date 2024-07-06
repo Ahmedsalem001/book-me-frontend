@@ -18,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <body className={`${outfit.className} `}>
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

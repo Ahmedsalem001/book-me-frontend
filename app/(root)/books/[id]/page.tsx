@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="flex flex-col gap-14 flex-1 max-sm:text-center">
         <div className="flex gap-16 items-center max-sm:flex-col justify-between">
           <div className="flex flex-col gap-6 max-sm:items-center">
-            <h1 className="text-5xl max-sm:text-3xl ">the covenant of water</h1>
+            <h1 className="text-5xl max-sm:text-3xl ">{title}</h1>
             <p className="text-[#00000087] text-3xl max-sm:text-xl">by: abraham verghase</p>
             <Rating name="simple-controlled" size="large"/>
           </div>

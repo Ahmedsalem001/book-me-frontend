@@ -16,7 +16,7 @@ const page = async () => {
       </div>
       <div className="flex flex-wrap justify-between gap-y-10 max-sm:flex-col max-sm:justify-center max-sm:items-center">{
         books?.data?.map((book: {bookimg: string , title: string , _id: string}) => (
-          <Card key={book?.title} srcImg={`https://additional-aurie-demo-project-book-me-f546ac8a.koyeb.app/uploads/${book?.bookimg}`} title={book?.title} bookId={book?._id} /> 
+          <Card Slider={false} key={book?.title} srcImg={`https://additional-aurie-demo-project-book-me-f546ac8a.koyeb.app/uploads/${book?.bookimg}`} title={book?.title} bookId={book?._id} /> 
         ))
       }</div>
     </main>

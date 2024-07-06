@@ -21,3 +21,9 @@
     text-wrap: balance;
   }
 }
+.slick-track{
+  display: flex !important;
+  justify-items: center;
+  align-items: center !important;
+  justify-content: center;
+}

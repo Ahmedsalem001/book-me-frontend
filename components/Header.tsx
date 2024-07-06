@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <nav className={`flex justify-between items-center px-20 max-sm:px-10 w-screen h-24 absolute`} style={{ background: `${pathname === "/" ? "#FFE5E538": "#FFE5E5"}`}}>
+    <nav className={`flex justify-between items-center px-20 max-sm:px-10 w-screen h-24 ${pathname === "/" && "absolute"} `} style={{ background: `${pathname === "/" ? "#FFE5E538": "#FFE5E5"}`}}>
       <Link href={"/"}><Image priority src={logoswitcher} width={230} height={66} alt="logo" className="max-sm:w-48" /></Link>
       <div className="flex justify-between ">
         {
@@ -55,6 +55,7 @@ const Header = () => {
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
+        
       > 
             {
           navLinks.map((link) => {

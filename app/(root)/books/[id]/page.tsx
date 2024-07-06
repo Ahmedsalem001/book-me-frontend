@@ -1,16 +1,25 @@
 import Image from "next/image";
 import Rating from "@mui/material/Rating";
 import { bookdata, comments } from "@/constants/bookdata"
+import logo from "@/public/logo2.svg";
+import { navLinks, contacts } from "@/constants";
+import Link from "next/link";
 
 import likenotlike from "@/public/likenotlike.svg"
+import Eslider from "@/components/Eslider";
 export default async function Page({ params }: { params: { id: string } }) {
   const book = await fetch(
     `https://additional-aurie-demo-project-book-me-f546ac8a.koyeb.app/api/books/${params.id}`
   ).then((res) => res.json());
+  const books = await fetch(
+    `https://additional-aurie-demo-project-book-me-f546ac8a.koyeb.app/api/books?page=1&limit=12`
+  ).then((res) => res.json());
   console.log(params.id);
   const { title, desc, bookimg } = book?.data;
   return (
-    <main className="h-screen w-screen max-sm:px-6 px-24 flex flex-row max-sm:flex-col py-20 gap-16">
+    <>
+    <main className="h-fit w-screen max-sm:px-6 px-24 flex flex-col py-20 gap-16 ">
+      <div className="flex gap-16 max-sm:flex-col">
       <div >
         <Image
           src={`https://additional-aurie-demo-project-book-me-f546ac8a.koyeb.app/uploads/${bookimg}`}
@@ -73,6 +82,8 @@ export default async function Page({ params }: { params: { id: string } }) {
           </div>
         </div>
       </div>
+      </div>
     </main>
+    </>
   );
 }

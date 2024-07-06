@@ -7,6 +7,7 @@ import next from "../public/next.svg";
 import prev from "../public/prev.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 function Eslider({ data }) {
   const SampleNextArrow = ({ className, style, onClick }) => {
     return (
@@ -35,7 +36,17 @@ function Eslider({ data }) {
       />
     );
   };
-  const x = window.matchMedia("(max-width: 700px)")
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+       breakpoint(window.matchMedia("(max-width: 700px)"));
+    });
+    return () => {
+      window.removeEventListener("resize", () => {
+        Breakpoint(Window.matchMedia("(max-width: 700px)"));
+      });
+    };
+  },[ ])
+  let x = window.matchMedia("(max-width: 700px)")
   const breakpoint = (x) => x.matches ? 1 : 6;
   const settings = {
     infinite: true,

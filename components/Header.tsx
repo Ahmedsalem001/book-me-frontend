@@ -43,7 +43,7 @@ const Header = () => {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
             onClick={handleClick}
-            className="hidden max-sm:block"
+            className="!hidden max-sm:block"
       >
         <Image src={menu} alt="menu" width={32} height={32} className="" />
       </Button>

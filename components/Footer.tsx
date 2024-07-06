@@ -1,11 +1,13 @@
+"use client"
 import Image from "next/image";
 import logo from "@/public/logo2.svg";
 import { navLinks, contacts } from "@/constants";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 const Footer = () => {
-  return (
-    <footer className="h-[50vh] w-screen bg-[#BA94D1] flex flex-col justify-between max-sm:px-6 px-16 pt-8 pb-5 max-sm:w-full max-sm:h-fit max-sm:gap-7 max-sm:items-center">
+  const pathname = usePathname();
+  return  (
+    <div className="h-[50vh] w-screen bg-[#BA94D1] flex flex-col justify-between max-sm:px-6 px-16 pt-8 pb-5 max-sm:w-full max-sm:h-fit max-sm:gap-7 max-sm:items-center ">
       <div className="flex max-sm:flex-col max-sm:gap-7">
         <div className="flex-1">
           <Image src={logo} alt="logo" />
@@ -38,7 +40,7 @@ const Footer = () => {
         <div className="text-white text-xl max-sm:text-lg"><h1>Copyright © 2023 All rights reserved</h1></div>
         <div className="text-white text-xl flex justify-between gap-10 max-sm:text-lg max-sm:gap-1"><h1>terms & condition</h1><h1>privacy policy</h1></div>
       </div>
-    </footer>
+    </div>
   );
 };
 

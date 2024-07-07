@@ -36,16 +36,7 @@ function Eslider({ data }) {
       />
     );
   };
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-       breakpoint(window.matchMedia("(max-width: 700px)"));
-    });
-    return () => {
-      window.removeEventListener("resize", () => {
-        Breakpoint(Window.matchMedia("(max-width: 700px)"));
-      });
-    };
-  },[ ])
+  
   let x = window.matchMedia("(max-width: 700px)")
   const breakpoint = (x) => x.matches ? 1 : 6;
   const settings = {

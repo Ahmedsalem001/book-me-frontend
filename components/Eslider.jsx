@@ -7,7 +7,7 @@ import next from "../public/next.svg";
 import prev from "../public/prev.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 function Eslider({ data }) {
   const SampleNextArrow = ({ className, style, onClick }) => {
     return (
@@ -37,12 +37,38 @@ function Eslider({ data }) {
     );
   };
   
-  let x = window.matchMedia("(max-width: 700px)")
-  const breakpoint = (x) => x.matches ? 1 : 6;
+  const [width, setWidth] = useState(() => {
+    if (typeof window === "undefined") {
+      return { width: 0 };
+    }
+    return window.innerWidth;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  const breakpoint = (width) => {
+    if (width < 768) {
+      return 1;
+    } else if (width < 992) {
+      return 2;
+    } else {
+      return 6;
+    }
+  };
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: breakpoint(x),
+    slidesToShow: breakpoint(width),
     slidesToScroll: 3,
     arrow: true,
     nextArrow: <SampleNextArrow />,

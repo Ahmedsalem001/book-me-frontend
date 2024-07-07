@@ -5,7 +5,7 @@ import Image from "next/image";
 import searchIcon from "@/public/searchIcon.svg";
 import history from "@/public/history.jpg";
 import literature from "@/public/literature.jpg";
-import novels from "@/public/novels.jpg";
+import novelsw from "@/public/novels.jpg";
 import since from "@/public/since.jpg";
 import Twobooks from "@/public/2books.svg";
 import contact from "@/public/contact.svg";
@@ -88,7 +88,7 @@ export default async function Home() {
           </div>
           <div className="col-span-4 row-span-3 col-start-5 max-sm:h-[300px] rounded-2xl relative flex items-end justify-center text-center overflow-hidden ">
             <Image
-              src={novels}
+              src={novelsw}
               alt="novels"
               className="!w-full h-full absolute -z-10"
             />
@@ -128,7 +128,7 @@ export default async function Home() {
           <div className="col-span-4 row-span-3 col-start-9  max-sm:h-[300px] row-start-4 relative flex items-end justify-center text-center overflow-hidden rounded-2xl">
             <Image
               src={since}
-              alt="novels"
+              alt="novelsw"
               className="w-full -bottom-28 absolute -z-10 "
             />
             <div>

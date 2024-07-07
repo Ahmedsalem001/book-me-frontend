@@ -12,7 +12,7 @@ export const navLinks = [
     label: "My List",
   },
   {
-    route: "#contact",
+    route: "/#contact",
     label: "Contact Us",
   },
 ];

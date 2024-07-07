@@ -177,17 +177,17 @@ export default async function Home() {
           <div className="px-28 max-sm:px-2 flex flex-col items-center flex-1 ">
           <h1 className="text-5xl text-center leading-loose max-sm:text-3xl">Contact Us</h1>
           <p className="text-2xl text-center max-sm:text-lg max-sm:mt-5">let us know how to help you </p>
-          <form className="w-full p-10 flex flex-col gap-8 max-sm:w-full max-sm:p-2">
+          <form className="w-full p-10 flex flex-col gap-8 max-sm:w-full max-sm:p-2 max-sm:mt-28">
             <div className="flex flex-col gap-4" >
-              <label className="text-3xl" htmlFor="name">Name</label>
+              <label className="text-3xl max-sm:text-xl" htmlFor="name">Name</label>
               <input className="px-3 py-4 border-[2px] border-[#756AB6] rounded-2xl focus:outline-none" placeholder="Enter your full name" type="text" id="name" />
             </div>
             <div className="flex flex-col gap-4"> 
-              <label className="text-3xl" htmlFor="email">Email</label>
+              <label className="text-3xl max-sm:text-xl" htmlFor="email">Email</label>
               <input className="px-3 py-4 border-[2px] border-[#756AB6] rounded-2xl focus:outline-none" placeholder="drazsara0@gmail.com" id="email" type="email" />
             </div>
-            <div className="flex flex-col gap-4">
-              <label className="text-3xl" htmlFor="message">Message</label>
+            <div className="flex flex-col gap-4 ">
+              <label className="text-3xl max-sm:text-lg" htmlFor="message">Message</label>
               <textarea className="px-3 py-4 border-[2px] border-[#756AB6] rounded-2xl focus:outline-none" placeholder="your message........." id="message"/>
             </div>
             <button  className="bg-[#756AB6] py-2 px-16 w-fit text-white rounded-lg text-xl m-auto">

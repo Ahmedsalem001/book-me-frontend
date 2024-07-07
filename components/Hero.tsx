@@ -10,7 +10,7 @@ const Hero = () => {
     if (inputRef.current) inputRef.current.focus();
   }
   return (
-    <section className="h-[100vh] flex flex-col justify-center items-center max-sm:px-6">
+    <section className="h-dvh flex flex-col justify-center items-center max-sm:px-6 transition-all duration-500 ease-in-out">
       <Image src={hero} alt="hero" fill className="-z-10" />
       <h1  className={`${pacifico.className} text-6xl max-sm:text-4xl text-center leading-relaxed text-white mb-12 mt-28`}>“There Is No Friend As <br /> Loyal As A Book.”</h1>
       <p className="text-xl text-white max-sm:text-center max-sm:text-lg">“The more that you read, the more things you will know. The more that you learn.”</p>

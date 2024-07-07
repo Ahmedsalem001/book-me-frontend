@@ -69,7 +69,7 @@ function Eslider({ data }) {
     infinite: true,
     speed: 500,
     slidesToShow: breakpoint(width),
-    slidesToScroll: 3,
+    slidesToScroll: breakpoint(width),
     arrow: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
